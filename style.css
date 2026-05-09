@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Romantic Headings */
+.title,
+#question,
+.final {
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 1px;
+}
+
+/* Sections */
+section {
+  display: none;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+section.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4f8b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+button:hover {
+  background: #ff77a8;
+}
+
+/* Birthday Page */
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease forwards;
+}
+
+#question {
+  font-size: 2.2rem;
+}
+
+#message p {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.final {
+  display: none;
+  font-size: 3rem;
+  margin-top: 30px;
+  color: pink;
+  animation: glow 2s infinite alternate;
+}
+
+/* Gallery */
+#gallery {
+  background: #111;
+  padding-top: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.photo {
+  background: #222;
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+@keyframes glow {
+  from {text-shadow: 0 0 10px pink;}
+  to {text-shadow: 0 0 25px hotpink;}
+}
